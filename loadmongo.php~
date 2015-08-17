@@ -1,0 +1,19 @@
+<?php
+
+
+
+var_dump("test");
+/*
+*Trying to integrate Mongo
+*
+*/
+
+use Packages\Libraries\Doctrine\MongoDB\Connection;
+use Packages\Doctrine\ODM\MongoDB\Configuration;
+use Packages\Doctrine\ODM\MongoDB\DocumentManager;
+use Packages\Doctrine\ODM\MongoDB\Mapping\Driver\AnnotationDriver;
+
+
+
+
+?>

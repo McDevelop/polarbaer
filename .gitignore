@@ -1,0 +1,7 @@
+Packages/Framework/*
+Packages/Libraries/*
+Packages/composer.json
+bin/*
+Buld/*
+Data/*
+Web/_Resources/*
