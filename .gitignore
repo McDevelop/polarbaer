@@ -2,6 +2,6 @@ Packages/Framework/*
 Packages/Libraries/*
 Packages/composer.json
 bin/*
-Buld/*
+Build/*
 Data/*
 Web/_Resources/*
