@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+<f:section name="Title"></f:section>
+
+<f:section name="Content">
+    
+    <div class="profilContent contentBackground floatLeft">
+        <f:for each="{profile}" as="profil">
+            <div class="suchAbschnitt">
+                <div class="floatLeft">
+                    <f:link.action action="show" controller="Profil" additionalParams="{profil: '{profil.name}'}">
+                        <img src="http://polabaer.de/Bilder/Profilbilder/{profil.profilBild}" />
+                    </f:link.action> 
+                 </div>
+                 <div class="name">
+                    <f:link.action action="show" controller="Profil" additionalParams="{profil: '{profil.name}'}">
+                        {profil.name}
+                    </f:link.action>
+                 </div>                           
+            </div>                       
+            <div class="clear"></div>
+          </f:for>
+    </div> 
+    <div class="profilNav floatRight">
+        <div class="profilNavHead"> Einstellungen </div>
+       
+    </div>
+    <div class="floatNone"></div>
+</f:section>

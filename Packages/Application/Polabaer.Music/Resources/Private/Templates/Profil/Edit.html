@@ -1,0 +1,96 @@
+<f:layout name="Default" />
+
+<f:section name="Title"></f:section>
+
+<f:section name="Content">
+    
+    <div class="profilContent floatLeft">
+        <div class="einstellungen contentBackground">
+            <f:form action="update" controller="Profil" method="post" name="updateform" objectName="profil" object="{profil}">
+                <div class="shortInfo">
+                    <div class="profilBild">
+                        <img src="http://polabaer.de/Bilder/Profilbilder/{profil.profilBild}" />
+                    </div>
+
+                    <div class="profilSteckbrief ">
+                        <div class="name">
+                            <label>
+                                <img src="http://polabaer.de/Bilder/Objekte/brief.png" />
+                            </label>
+                            {profil.Name}
+                        </div>            
+                        <div><label>
+                                <img src="http://polabaer.de/Bilder/Objekte/haus.png" />
+                            </label>
+                            <f:form.textfield name="ort" property="ort" placeholder="Ort" value="{profil.Ort}"/>,
+                            <f:form.textfield name="alter" property="alter" placeholder="Alter" value="{profil.Alter}"/>
+                        </div>
+                        <div><label>
+                                <img src="http://polabaer.de/Bilder/Objekte/instrument.png" />
+                            </label>
+                            <f:form.select property="instrumentText" options="{Gitarre: 'Gitarre', Schlagzeug: 'Schlagzeug', Gesang : 'Gesang'}" />
+                            
+                        </div>
+                        <div><b>Band:</b>
+                            <f:form.textfield name="bandNames" property="bandNames" placeholder="Bandname, z.B. Foo Fighters, Farbe Lila" value="{profil.BandName}"/>
+                        </div> 
+                    </div>
+                    <div class="profilVita marginTop">
+                        <div class="ueberschrift">
+                            <label>
+                                <img src="http://polabaer.de/Bilder/Objekte/ueberMich.png" />
+                            </label>
+                            Über mich</div>
+                        <div class="marginTop">
+                            <f:form.textarea name="ueberMich" property="ueberMich" value="{profil.ueberMich}" />                            
+                        </div>
+                    </div>
+                    
+                    <div class="profilSuche marginTop">
+                        <div class="ueberschrift">
+                            <label>
+                                <img src="http://polabaer.de/Bilder/Objekte/lupi.png" />
+                            </label>
+                            Meine Suche</div>
+                        <div class="marginTop">
+                            <f:form.textarea name="suchInfoText" property="suchInfoText" value="{profil.suchInfoText}" />
+                        </div>
+                    </div>
+                    <f:form.submit value="Update" />
+                </div>
+            </f:form>
+        </div> 
+    </div> 
+    <div class="profilNav floatRight">
+        <div class="profilNavHead"> Profil </div>
+        <ul>
+            <f:if condition="{eigenesProfil}">
+                <li>
+                <f:link.action action="showEinstellungen" controller="Profil">
+                    Einstellungen
+                </f:link.action>
+                </li>
+            </f:if>            
+            <li>
+                <a href="">Profilbild ändern</a>
+            </li>
+            <li>
+                <a href=""> Nachrichten (2)</a>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="socialMediaIcons floatRight">
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/instagram.png" />
+        </div>
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/twitter.png" />
+        </div>
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/fb.png" />
+        </div>
+    </div>
+    
+    <div class="floatNone"></div>
+</f:section>
