@@ -1,0 +1,16 @@
+roles:
+  'Polabaer.Music:Admin':
+              privileges: []
+
+  'Polabaer.Music:Fan':
+              privileges: []
+
+  'Polabaer.Music:Mukker':
+              privileges: []
+
+  'Polabaer.Music:Band':
+              privileges: []
+
+  'Acme.MyPackage:PrivilegedCustomer':
+              parentRoles: ['Acme.MyPackage:Customer']
+              privileges: []

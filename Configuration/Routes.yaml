@@ -1,0 +1,33 @@
+#                                                                        #
+# Routes configuration                                                   #
+#                                                                        #
+# This file contains the configuration for the MVC router.               #
+# Just add your own modifications as necessary.                          #
+#                                                                        #
+# Please refer to the Flow manual for possible configuration options.    #
+#                                                                        #
+
+##
+# Polabaer subroutes
+
+-
+  name: 'Polabaer'
+  uriPattern: '<PolabaerSubroutes>'
+  defaults:    
+    @format:  'html'
+  subRoutes:
+    PolabaerSubroutes:
+      package: Polabaer.Music
+
+##
+# Flow subroutes
+#
+#
+#-
+#  name: 'Flow'
+#  uriPattern: '<FlowSubroutes>'
+#  defaults:
+#    '@format': 'html'
+#  subRoutes:
+#    FlowSubroutes:
+#      package: TYPO3.Flow
