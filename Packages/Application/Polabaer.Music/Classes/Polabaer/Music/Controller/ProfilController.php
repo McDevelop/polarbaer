@@ -76,8 +76,12 @@ class ProfilController extends \TYPO3\Flow\Mvc\Controller\ActionController {
     public function showEinstellungenAction() {
         
         
+        $account = $this->securityContext->getAccount();
+        $name = $account->getAccountIdentifier();
+                
+        $profil = $this->profilRepository->findOneByName($name);
         
-        
+        $this->view->assign('profil', $profil);
         $this->view->assign('NewsActive', FALSE);
         $this->view->assign('SucheActive', FALSE);
         $this->view->assign('NetzwerkActive', FALSE);
@@ -85,15 +89,10 @@ class ProfilController extends \TYPO3\Flow\Mvc\Controller\ActionController {
     }
     
     /**
+     * @var \Polabaer\Music\Domain\Model\Profil $profil
      * @return void
      */
-    public function editAction() {
-        
-        
-        $account = $this->securityContext->getAccount();
-        $name = $account->getAccountIdentifier();
-                
-        $profil = $this->profilRepository->findOneByName($name);
+    public function editAction(\Polabaer\Music\Domain\Model\Profil $profil) {
         // Profil editieren
         
         $this->view->assign('profil', $profil);
@@ -110,7 +109,7 @@ class ProfilController extends \TYPO3\Flow\Mvc\Controller\ActionController {
      */
     public function updateAction(\Polabaer\Music\Domain\Model\Profil $profil) {
         
-              
+        
         // Profil updaten        
         $this->profilRepository->update($profil);
         
