@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><f:render section="Title" /></title>
+                <link rel="stylesheet" href="{f:uri.resource(path: 'Css/style.css')}" type="text/css" media="all" />
+		<f:base />
+	</head>
+	<body>
+            <div>
+                <header>
+                    <f:render partial="Header" arguments="{_all}"/>
+                </header>    
+                <div class="content">
+                    <f:render section="Content" />
+                </div>		
+            </div>
+	</body>
+</html>

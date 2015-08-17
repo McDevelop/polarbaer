@@ -1,0 +1,64 @@
+<f:layout name="Default" />
+
+<f:section name="Title"></f:section>
+
+<f:section name="Content">
+    
+    <div class="profilContent floatLeft">
+        <div class="einstellungen contentBackground">
+            <h1> Einstellungen</h1>
+            <div>
+                <f:link.action action="edit" controller="Profil">
+                    Profildaten bearbeiten
+                </f:link.action>
+            </div>    
+            <div>
+                <f:link.action action="edit" controller="Profil">
+                    Suchstatus bearbeiten
+                </f:link.action>
+            </div>  
+            <div>
+                <f:link.action action="edit" controller="Profil">
+                    Passwort ändern
+                </f:link.action>
+            </div>
+            <div>
+                <f:link.action action="edit" controller="Profil">
+                    Bilder hochladen
+                </f:link.action>
+            </div>
+        </div> 
+    </div> 
+    <div class="profilNav floatRight">
+        <div class="profilNavHead"> Profil </div>
+        <ul>
+            <f:if condition="{eigenesProfil}">
+                <li>
+                <f:link.action action="showEinstellungen" controller="Profil">
+                    Einstellungen
+                </f:link.action>
+                </li>
+            </f:if>            
+            <li>
+                <a href="">Profilbild ändern</a>
+            </li>
+            <li>
+                <a href=""> Nachrichten (2)</a>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="socialMediaIcons floatRight">
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/instagram.png" />
+        </div>
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/twitter.png" />
+        </div>
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/fb.png" />
+        </div>
+    </div>
+    
+    <div class="floatNone"></div>
+</f:section>

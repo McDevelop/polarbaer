@@ -1,0 +1,82 @@
+<f:layout name="Default" />
+
+<f:section name="Title"></f:section>
+
+<f:section name="Content">
+    
+    <div class="profilContent floatLeft">
+        <div class="shortInfo contentBackground">
+            <div class="profilBild">
+                <img src="http://polabaer.de/Bilder/Profilbilder/{profil.profilBild}" />
+            </div>
+
+            <div class="profilSteckbrief ">
+                <div class="name">
+                    <label>
+                        <img src="http://polabaer.de/Bilder/Objekte/brief.png" />
+                    </label>{profil.Name}
+                </div>            
+                <div><label>
+                        <img src="http://polabaer.de/Bilder/Objekte/haus.png" />
+                    </label> Kiel, 26</div>
+                <div><label>
+                        <img src="http://polabaer.de/Bilder/Objekte/instrument.png" />
+                    </label>Gitarre, Schlagzeug, Gesang</div>
+                <div><b>Band:</b> Farbe Lila, The Young And Careless</div>                
+            </div>             
+        </div>
+       
+        <div class="profilVita marginTopGroß contentBackground">
+            <div class="ueberschrift">
+                <label>
+                    <img src="http://polabaer.de/Bilder/Objekte/ueberMich.png" />
+                </label>
+                Über mich</div>
+            <div class="marginTop">Ich hab schon geile Bands am start,
+                aber hab Lust hier ein wenig rumzukompostieren. Schreib mal
+                ne pc, jao.
+            </div>
+        </div>
+        <div class="profilSuche contentBackground marginTopGroß">
+            <div class="ueberschrift">
+                <label>
+                    <img src="http://polabaer.de/Bilder/Objekte/lupi.png" />
+                </label>
+                Meine Suche</div>
+            <div class="marginTop">Bin immer auf der Suche nach neuen
+            fetzigen Projekten, also schreibt mir ! </div>
+        </div>
+    </div> 
+    <div class="profilNav floatRight">
+        <div class="profilNavHead"> Menü </div>
+        <ul>
+            <f:if condition="{eigenesProfil}">
+                <li>
+                <f:link.action action="showEinstellungen" controller="Profil">
+                    Einstellungen
+                </f:link.action>
+                </li>
+            </f:if>            
+            <li>
+                <a href="">Profilbild ändern</a>
+            </li>
+            <li>
+                <a href=""> Nachrichten (2)</a>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="socialMediaIcons floatRight">
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/instagram.png" />
+        </div>
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/twitter.png" />
+        </div>
+        <div>
+            <img src="http://polabaer.de/Bilder/Objekte/fb.png" />
+        </div>
+    </div>
+    
+    <div class="floatNone"></div>
+</f:section>
