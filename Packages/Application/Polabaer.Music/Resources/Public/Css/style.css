@@ -13,7 +13,7 @@ body {
     background-image: url("/Bilder/Header/backgroundpixel.jpg");
     margin: 0px;
     padding: 0px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Allgemein */
@@ -47,7 +47,7 @@ header {
     text-align: left;
     margin: 0px auto;
     padding: 0px;
-    height: 310px;
+    height: 185px;
 }
 
 .headerLogo {
@@ -60,10 +60,11 @@ header {
     position: relative;
     
     margin-top: 55px;
+    width: 230px;
 }
 
 .menue {
-    padding-left: 94px;
+    padding-left: 215px;
 }
 
 .menue nav { 
@@ -76,8 +77,8 @@ header {
 }
  
 .menue nav ul li {
-    font-size: 32px;
-  height: 35px;
+    font-size: 20px;
+  //height: 35px;
   float: left;
   margin-right: 0px;
   border-right: 1px solid #aaa;
@@ -115,7 +116,7 @@ header {
 
 .content {
     width: 980px;    
-    margin: 40px auto 0px;
+    margin: 0 auto 0px;
     font-family: Gill Sans Light,Helvetica, Verdana, sans-serif;
 }
 
@@ -136,10 +137,11 @@ header {
 
 .profilBild {
     text-align: center;
-    width:  150px;
-    height: 150px;   
+    width:  100px;
+    height: 100px;   
     display: inline-block;
-    margin-top: -30px;
+    margin-top: -21px;
+    margin-left: -31px;
 }
 
 .profilBild img {    
@@ -148,10 +150,10 @@ header {
 }
 
 .profilContent .shortInfo {
-    width: 707px;
-    height: 216px;
-    margin-top: 30px;    
-    margin-left: 140px;
+    width: 486px;
+    height: 143px;
+    margin-top: 17px;    
+    margin-left: 247px;
 }
 
 .profilContent .profilVita .ueberschrift, .profilSuche .ueberschrift {
