@@ -109,7 +109,6 @@ class ProfilController extends \TYPO3\Flow\Mvc\Controller\ActionController {
      */
     public function updateAction(\Polabaer\Music\Domain\Model\Profil $profil) {
         
-        
         // Profil updaten        
         $this->profilRepository->update($profil);
         

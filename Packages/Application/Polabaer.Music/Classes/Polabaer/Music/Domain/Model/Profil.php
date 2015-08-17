@@ -42,10 +42,10 @@ class Profil  extends \TYPO3\Party\Domain\Model\AbstractParty {
         protected $zip;
         
         /**
-         * Alter
+         * Plz
          * @var int
          */
-        protected $alter;
+        protected $age;
         
         /**
          * Bands in denen das Profil gespielt hat
@@ -131,19 +131,19 @@ class Profil  extends \TYPO3\Party\Domain\Model\AbstractParty {
 		$this->zip = $zip;
 	}
         
-        /**
+       /**
 	 * @return int
 	 */
-	public function getAlter() {
-		return $this->alter;
+	public function getAge() {
+		return $this->age;
 	}
 
 	/**
-	 * @param int $alter
+	 * @param int $age
 	 * @return void
 	 */
-	public function setAlter($alter) {
-		$this->alter = $alter;
+	public function setAge($age) {
+		$this->age = $age;
 	}
         
         /**
