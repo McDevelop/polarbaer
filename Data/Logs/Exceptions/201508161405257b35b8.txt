@@ -1,0 +1,93 @@
+Uncaught exception #1355480641 in line 250 of /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Scripts.php: 
+Uncaught Exception: TYPO3\Flow\Configuration\Exception\InvalidConfigurationException
+
+Message
+  Global policy configuration is not allowed (but the file
+  "/var/www/polabaer/Configuration/Policy" exists).
+
+More Information
+  Exception code 1352985128
+  File           Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php line 496
+  Reference code 2015081614052510ff0b
+
+Stack trace
+
+#0 TYPO3\Flow\Configuration\ConfigurationManager::loadConfiguration()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php:339
+
+#1 TYPO3\Flow\Configuration\ConfigurationManager::getConfiguration()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Security/Policy/PolicyService.php:169
+
+#2 TYPO3\Flow\Security\Policy\PolicyService::initializeObject()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Object/CompileTimeObjectManager.php:374
+
+#3 TYPO3\Flow\Object\CompileTimeObjectManager::get()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Pointcut/PointcutExpressionParser.php:315
+
+#4 TYPO3\Flow\Aop\Pointcut\PointcutExpressionParser::parseDesignatorFilter()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Pointcut/PointcutExpressionParser.php:150
+
+#5 TYPO3\Flow\Aop\Pointcut\PointcutExpressionParser::parse()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Builder/ProxyClassBuilder.php:320
+
+#6 TYPO3\Flow\Aop\Builder\ProxyClassBuilder::buildAspectContainer()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Builder/ProxyClassBuilder.php:297
+
+#7 TYPO3\Flow\Aop\Builder\ProxyClassBuilder::buildAspectContainers()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Builder/ProxyClassBuilder.php:192
+
+#8 TYPO3\Flow\Aop\Builder\ProxyClassBuilder::build()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Command/CoreCommandController.php:183
+
+#9 TYPO3\Flow\Command\CoreCommandController::compileCommand()
+
+#10 ::call_user_func_array()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandController.php:240
+
+#11 TYPO3\Flow\Cli\CommandController::callCommandMethod()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandController.php:110
+
+#12 TYPO3\Flow\Cli\CommandController::processRequest()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Mvc/Dispatcher.php:80
+
+#13 TYPO3\Flow\Mvc\Dispatcher::dispatch()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandRequestHandler.php:97
+
+#14 TYPO3\Flow\Cli\CommandRequestHandler::handleRequest()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Bootstrap.php:111
+
+#15 TYPO3\Flow\Core\Bootstrap::run()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Scripts/flow.php:55
+
+
+17 TYPO3\Flow\Core\Booting\Scripts::executeCommand("typo3.flow:core:compile", array|16|)
+16 TYPO3\Flow\Core\Booting\Scripts::initializeProxyClasses(TYPO3\Flow\Core\Bootstrap)
+15 TYPO3\Flow\Core\Booting\Scripts::recompileClasses(TYPO3\Flow\Core\Bootstrap)
+14 call_user_func(array|2|, TYPO3\Flow\Core\Bootstrap)
+13 TYPO3\Flow\Core\Booting\Step::__invoke(TYPO3\Flow\Core\Bootstrap)
+12 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+11 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+10 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+9 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+8 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+7 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+6 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+5 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+4 TYPO3\Flow\Core\Booting\Sequence::invoke(TYPO3\Flow\Core\Bootstrap)
+3 TYPO3\Flow\Http\RequestHandler::boot()
+2 TYPO3\Flow\Http\RequestHandler::handleRequest()
+1 TYPO3\Flow\Core\Bootstrap::run()
+
+HTTP REQUEST:
+GET / HTTP/1.1
+Host: polabaer.de
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+
+HTTP RESPONSE:
+[response was empty]

@@ -1,0 +1,48 @@
+Uncaught exception in line 776 of /var/www/polabaer/Packages/Libraries/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php: A new entity was found through the relationship 'TYPO3\Flow\Security\Account#party' that was not configured to cascade persist operations for entity: Polabaer\Music\Domain\Model\Profil@000000006c185dde00007ff6b265cc9d. To solve this issue: Either explicitly call EntityManager#persist() on this unknown entity or configure cascade persist  this association in the mapping for example @ManyToOne(..,cascade={"persist"}). If you cannot find out which entity causes the problem implement 'TYPO3\Party\Domain\Model\AbstractParty#__toString()' to get a clue.
+
+29 Doctrine\ORM\ORMInvalidArgumentException::newEntityFoundThroughRelationship(array|20|, Polabaer\Music\Domain\Model\Profil)
+28 Doctrine\ORM\UnitOfWork::computeAssociationChanges(array|20|, Polabaer\Music\Domain\Model\Profil)
+27 Doctrine\ORM\UnitOfWork::computeChangeSet(TYPO3\Flow\Persistence\Doctrine\Mapping\ClassMetadata, TYPO3\Flow\Security\Account)
+26 Doctrine\ORM\UnitOfWork::computeScheduleInsertsChangeSets()
+25 Doctrine\ORM\UnitOfWork::computeChangeSets()
+24 Doctrine\ORM\UnitOfWork::commit(NULL)
+23 Doctrine\ORM\EntityManager::flush()
+22 TYPO3\Flow\Persistence\Doctrine\PersistenceManager_Original::persistAll()
+21 Polabaer\Music\Controller\AuthenticationController_Original::createAction("Peter Peter", "test", "test", "Fan")
+20 call_user_func_array(array|2|, array|4|)
+19 TYPO3\Flow\Mvc\Controller\ActionController_Original::callActionMethod()
+18 TYPO3\Flow\Mvc\Controller\ActionController_Original::processRequest(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+17 TYPO3\Flow\Mvc\Dispatcher_Original::dispatch(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+16 TYPO3\Flow\Mvc\Dispatcher::dispatch(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+15 call_user_func_array(array|2|, array|2|)
+14 TYPO3\Flow\Mvc\Dispatcher::Flow_Aop_Proxy_invokeJoinPoint(TYPO3\Flow\Aop\JoinPoint)
+13 TYPO3\Flow\Aop\Advice\AdviceChain::proceed(TYPO3\Flow\Aop\JoinPoint)
+12 TYPO3\Flow\Security\Aspect\RequestDispatchingAspect_Original::blockIllegalRequestsAndForwardToAuthenticationEntryPoints(TYPO3\Flow\Aop\JoinPoint)
+11 TYPO3\Flow\Aop\Advice\AroundAdvice::invoke(TYPO3\Flow\Aop\JoinPoint)
+10 TYPO3\Flow\Aop\Advice\AdviceChain::proceed(TYPO3\Flow\Aop\JoinPoint)
+9 TYPO3\Flow\Mvc\Dispatcher::dispatch(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+8 call_user_func_array(array|2|, array|2|)
+7 TYPO3\Flow\Object\DependencyInjection\DependencyProxy::__call("dispatch", array|2|)
+6 TYPO3\Flow\Object\DependencyInjection\DependencyProxy::dispatch(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+5 TYPO3\Flow\Mvc\DispatchComponent_Original::handle(TYPO3\Flow\Http\Component\ComponentContext)
+4 TYPO3\Flow\Http\Component\ComponentChain_Original::handle(TYPO3\Flow\Http\Component\ComponentContext)
+3 TYPO3\Flow\Http\Component\ComponentChain_Original::handle(TYPO3\Flow\Http\Component\ComponentContext)
+2 TYPO3\Flow\Http\RequestHandler::handleRequest()
+1 TYPO3\Flow\Core\Bootstrap::run()
+
+HTTP REQUEST:
+POST /polabaer.music/authentication/create HTTP/1.1
+Host: polabaer.de
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://polabaer.de/polabaer.music/authentication/register
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 482
+
+__referrer%5B%40package%5D=Polabaer.Music&__referrer%5B%40subpackage%5D=&__referrer%5B%40controller%5D=Authentication&__referrer%5B%40action%5D=register&__referrer%5Barguments%5D=YTowOnt906f89ed256740d52687856230cb15438db8ec7a8&__trustedProperties=a%3A5%3A%7Bs%3A4%3A%22name%22%3Bi%3A1%3Bs%3A4%3A%22pass%22%3Bi%3A1%3Bs%3A5%3A%22pass2%22%3Bi%3A1%3Bs%3A4%3A%22role%22%3Bi%3A1%3Bi%3A0%3Bi%3A1%3B%7Da35b075e671a16652b09cd7d40432f6608640e9c&name=Peter+Peter&pass=test&pass2=test&role=Fan
+
+HTTP RESPONSE:
+[response was empty]

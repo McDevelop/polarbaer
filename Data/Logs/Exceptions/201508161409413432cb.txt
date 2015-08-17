@@ -1,0 +1,88 @@
+Uncaught exception #1355480641 in line 250 of /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Scripts.php: 
+Uncaught Exception: TYPO3\Flow\Error\Exception
+
+Message
+  Warning: strpos() expects parameter 1 to be string, array given in
+  /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php
+  line 573
+
+More Information
+  Exception code 1
+  File           Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Error/ErrorHandler.php line 77
+  Reference code 201508161409410e25e6
+
+Stack trace
+
+#0 TYPO3\Flow\Error\ErrorHandler::handleError()
+
+#1 ::strpos()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php:573
+
+#2 TYPO3\Flow\Configuration\ConfigurationManager::TYPO3\Flow\Configuration\{closure}()
+
+#3 ::array_map()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php:577
+
+#4 TYPO3\Flow\Configuration\ConfigurationManager::loadPolicyConfigurationFile()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php:493
+
+#5 TYPO3\Flow\Configuration\ConfigurationManager::loadConfiguration()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Configuration/ConfigurationManager.php:339
+
+#6 TYPO3\Flow\Configuration\ConfigurationManager::getConfiguration()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Security/Policy/PolicyService.php:169
+
+#7 TYPO3\Flow\Security\Policy\PolicyService::initializeObject()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Object/CompileTimeObjectManager.php:374
+
+#8 TYPO3\Flow\Object\CompileTimeObjectManager::get()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Pointcut/PointcutExpressionParser.php:315
+
+#9 TYPO3\Flow\Aop\Pointcut\PointcutExpressionParser::parseDesignatorFilter()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Pointcut/PointcutExpressionParser.php:150
+
+#10 TYPO3\Flow\Aop\Pointcut\PointcutExpressionParser::parse()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Builder/ProxyClassBuilder.php:320
+
+#11 TYPO3\Flow\Aop\Builder\ProxyClassBuilder::buildAspectContainer()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Builder/ProxyClassBuilder.php:297
+
+#12 TYPO3\Flow\Aop\Builder\ProxyClassBuilder::buildAspectContainers()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Aop/Builder/ProxyClassBuilder.php:192
+
+#13 TYPO3\Flow\Aop\Builder\ProxyClassBuilder::build()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Command/CoreCommandController.php:183
+
+#14 TYPO3\Flow\Command\CoreCommandController::compileCommand()
+
+#15 ::call_user_func_array()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandController.php:240
+
+#16 TYPO3\Flow\Cli\CommandController::callCommandMethod()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandController.php:110
+
+#17 TYPO3\Flow\Cli\CommandController::processRequest()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Mvc/Dispatcher.php:80
+
+#18 TYPO3\Flow\Mvc\Dispatcher::dispatch()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandRequestHandler.php:97
+
+#19 TYPO3\Flow\Cli\CommandRequestHandler::handleRequest()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Bootstrap.php:111
+
+#20 TYPO3\Flow\Core\Bootstrap::run()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Scripts/flow.php:55
+
+
+12 TYPO3\Flow\Core\Booting\Scripts::executeCommand("typo3.flow:core:compile", array|16|)
+11 TYPO3\Flow\Core\Booting\Scripts::initializeProxyClasses(TYPO3\Flow\Core\Bootstrap)
+10 call_user_func(array|2|, TYPO3\Flow\Core\Bootstrap)
+9 TYPO3\Flow\Core\Booting\Step::__invoke(TYPO3\Flow\Core\Bootstrap)
+8 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+7 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+6 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+5 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+4 TYPO3\Flow\Core\Booting\Sequence::invoke(TYPO3\Flow\Core\Bootstrap)
+3 TYPO3\Flow\Http\RequestHandler::boot()
+2 TYPO3\Flow\Http\RequestHandler::handleRequest()
+1 TYPO3\Flow\Core\Bootstrap::run()

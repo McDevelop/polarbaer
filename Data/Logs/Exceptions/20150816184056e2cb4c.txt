@@ -1,0 +1,104 @@
+Uncaught exception #1355480641 in line 250 of /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Scripts.php: 
+Uncaught Exception: InvalidArgumentException
+
+Message
+  Found an invalid element type declaration in class
+  "Polabaer\Music\Domain\Model\Profil" for property "account". A type
+  "'account'" does not exist.
+
+More Information
+  Exception code 1315564475
+  File           Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Reflection/ReflectionService.php line 1527
+
+Stack trace
+
+#0 TYPO3\Flow\Reflection\ReflectionService::addPropertiesToClassSchema()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Reflection/ReflectionService.php:1477
+
+#1 TYPO3\Flow\Reflection\ReflectionService::buildClassSchemata()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Reflection/ReflectionService.php:1253
+
+#2 TYPO3\Flow\Reflection\ReflectionService::reflectEmergedClasses()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Reflection/ReflectionService.php:356
+
+#3 TYPO3\Flow\Reflection\ReflectionService::buildReflectionData()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Object/CompileTimeObjectManager.php:113
+
+#4 TYPO3\Flow\Object\CompileTimeObjectManager::initialize()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Scripts.php:325
+
+#5 TYPO3\Flow\Core\Booting\Scripts::initializeObjectManagerCompileTimeFinalize()
+
+#6 ::call_user_func()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Step.php:49
+
+#7 TYPO3\Flow\Core\Booting\Step::__invoke()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Sequence.php:101
+
+#8 TYPO3\Flow\Core\Booting\Sequence::invokeStep()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Sequence.php:105
+
+#9 TYPO3\Flow\Core\Booting\Sequence::invokeStep()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Sequence.php:105
+
+#10 TYPO3\Flow\Core\Booting\Sequence::invokeStep()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Sequence.php:105
+
+#11 TYPO3\Flow\Core\Booting\Sequence::invokeStep()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Sequence.php:105
+
+#12 TYPO3\Flow\Core\Booting\Sequence::invokeStep()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Sequence.php:105
+
+#13 TYPO3\Flow\Core\Booting\Sequence::invokeStep()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Sequence.php:105
+
+#14 TYPO3\Flow\Core\Booting\Sequence::invokeStep()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Booting/Sequence.php:85
+
+#15 TYPO3\Flow\Core\Booting\Sequence::invoke()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandRequestHandler.php:141
+
+#16 TYPO3\Flow\Cli\CommandRequestHandler::boot()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Cli/CommandRequestHandler.php:89
+
+#17 TYPO3\Flow\Cli\CommandRequestHandler::handleRequest()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Classes/TYPO3/Flow/Core/Bootstrap.php:111
+
+#18 TYPO3\Flow\Core\Bootstrap::run()
+   /var/www/polabaer/Packages/Framework/TYPO3.Flow/Scripts/flow.php:55
+
+
+17 TYPO3\Flow\Core\Booting\Scripts::executeCommand("typo3.flow:core:compile", array|16|)
+16 TYPO3\Flow\Core\Booting\Scripts::initializeProxyClasses(TYPO3\Flow\Core\Bootstrap)
+15 TYPO3\Flow\Core\Booting\Scripts::recompileClasses(TYPO3\Flow\Core\Bootstrap)
+14 call_user_func(array|2|, TYPO3\Flow\Core\Bootstrap)
+13 TYPO3\Flow\Core\Booting\Step::__invoke(TYPO3\Flow\Core\Bootstrap)
+12 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+11 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+10 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+9 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+8 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+7 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+6 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+5 TYPO3\Flow\Core\Booting\Sequence::invokeStep(TYPO3\Flow\Core\Booting\Step, TYPO3\Flow\Core\Bootstrap)
+4 TYPO3\Flow\Core\Booting\Sequence::invoke(TYPO3\Flow\Core\Bootstrap)
+3 TYPO3\Flow\Http\RequestHandler::boot()
+2 TYPO3\Flow\Http\RequestHandler::handleRequest()
+1 TYPO3\Flow\Core\Bootstrap::run()
+
+HTTP REQUEST:
+GET /polabaer.music/profil/show?profil=Leif HTTP/1.1
+Host: polabaer.de
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:40.0) Gecko/20100101 Firefox/40.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://polabaer.de/polabaer.music/suche/show
+Connection: keep-alive
+Cache-Control: max-age=0
+
+
+
+HTTP RESPONSE:
+[response was empty]

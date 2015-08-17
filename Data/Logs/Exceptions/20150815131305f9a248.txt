@@ -1,0 +1,52 @@
+Uncaught exception in line 140 of /var/www/polabaer/Packages/Libraries/doctrine/dbal/lib/Doctrine/DBAL/Statement.php: An exception occurred while executing 'INSERT INTO polabaer_music_domain_model_profil (persistence_object_identifier, name, email, password, alter, ort, zip, vita) VALUES (?, ?, ?, ?, ?, ?, ?, ?)' with params ["e1683269-9275-1b1c-ff49-f0fb5468b81a", "test", null, null, null, null, null, null]:
+
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'alter, ort, zip, vita) VALUES ('e1683269-9275-1b1c-ff49-f0fb5468b81a', 'test', N' at line 1
+
+31 Doctrine\DBAL\DBALException::driverExceptionDuringQuery(PDOException, "INSERT INTO polabaer_music_domain_model_profil (persistence_object_identifier, name, email, password, alter, ort, zip, vita) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", array|8|)
+30 Doctrine\DBAL\Statement::execute()
+29 Doctrine\ORM\Persisters\BasicEntityPersister::executeInserts()
+28 Doctrine\ORM\UnitOfWork::executeInserts(TYPO3\Flow\Persistence\Doctrine\Mapping\ClassMetadata)
+27 Doctrine\ORM\UnitOfWork::commit(NULL)
+26 Doctrine\ORM\EntityManager::flush()
+25 TYPO3\Flow\Persistence\Doctrine\PersistenceManager_Original::persistAll()
+24 TYPO3\Flow\Package::TYPO3\Flow\{closure}(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response, Polabaer\Music\Controller\ProfilController, "TYPO3\Flow\Mvc\Dispatcher::afterControllerInvocation")
+23 Closure::__invoke(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response, Polabaer\Music\Controller\ProfilController, "TYPO3\Flow\Mvc\Dispatcher::afterControllerInvocation")
+22 call_user_func_array(array|2|, array|4|)
+21 TYPO3\Flow\SignalSlot\Dispatcher::dispatch("TYPO3\Flow\Mvc\Dispatcher", "afterControllerInvocation", array|3|)
+20 TYPO3\Flow\SignalSlot\SignalAspect_Original::forwardSignalToDispatcher(TYPO3\Flow\Aop\JoinPoint)
+19 TYPO3\Flow\Aop\Advice\AbstractAdvice::invoke(TYPO3\Flow\Aop\JoinPoint)
+18 TYPO3\Flow\Mvc\Dispatcher::emitAfterControllerInvocation(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response, Polabaer\Music\Controller\ProfilController)
+17 TYPO3\Flow\Mvc\Dispatcher_Original::dispatch(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+16 TYPO3\Flow\Mvc\Dispatcher::dispatch(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+15 call_user_func_array(array|2|, array|2|)
+14 TYPO3\Flow\Mvc\Dispatcher::Flow_Aop_Proxy_invokeJoinPoint(TYPO3\Flow\Aop\JoinPoint)
+13 TYPO3\Flow\Aop\Advice\AdviceChain::proceed(TYPO3\Flow\Aop\JoinPoint)
+12 TYPO3\Flow\Security\Aspect\RequestDispatchingAspect_Original::blockIllegalRequestsAndForwardToAuthenticationEntryPoints(TYPO3\Flow\Aop\JoinPoint)
+11 TYPO3\Flow\Aop\Advice\AroundAdvice::invoke(TYPO3\Flow\Aop\JoinPoint)
+10 TYPO3\Flow\Aop\Advice\AdviceChain::proceed(TYPO3\Flow\Aop\JoinPoint)
+9 TYPO3\Flow\Mvc\Dispatcher::dispatch(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+8 call_user_func_array(array|2|, array|2|)
+7 TYPO3\Flow\Object\DependencyInjection\DependencyProxy::__call("dispatch", array|2|)
+6 TYPO3\Flow\Object\DependencyInjection\DependencyProxy::dispatch(TYPO3\Flow\Mvc\ActionRequest, TYPO3\Flow\Http\Response)
+5 TYPO3\Flow\Mvc\DispatchComponent_Original::handle(TYPO3\Flow\Http\Component\ComponentContext)
+4 TYPO3\Flow\Http\Component\ComponentChain_Original::handle(TYPO3\Flow\Http\Component\ComponentContext)
+3 TYPO3\Flow\Http\Component\ComponentChain_Original::handle(TYPO3\Flow\Http\Component\ComponentContext)
+2 TYPO3\Flow\Http\RequestHandler::handleRequest()
+1 TYPO3\Flow\Core\Bootstrap::run()
+
+HTTP REQUEST:
+POST /polabaer.music/profil/create HTTP/1.1
+Host: polabaer.de
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:39.0) Gecko/20100101 Firefox/39.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: de,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate
+Referer: http://polabaer.de/index.php/polabaer.music/profil/new
+Connection: keep-alive
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 554
+
+__referrer%5B%40package%5D=Polabaer.Music&__referrer%5B%40subpackage%5D=&__referrer%5B%40controller%5D=Profil&__referrer%5B%40action%5D=new&__referrer%5Barguments%5D=YTowOnt906f89ed256740d52687856230cb15438db8ec7a8&__trustedProperties=a%3A2%3A%7Bs%3A6%3A%22profil%22%3Ba%3A3%3A%7Bs%3A4%3A%22name%22%3Bi%3A1%3Bs%3A8%3A%22password%22%3Bi%3A1%3Bs%3A5%3A%22alter%22%3Bi%3A1%3B%7Ds%3A6%3A%22submit%22%3Bi%3A1%3B%7D8a57992c6a733a70bb86a9b15f6fc425c80c91fe&profil%5Bname%5D=Ich+bin+ein+neues+Profil&profil%5Bpassword%5D=test&profil%5Balter%5D=26&submit=anmelden
+
+HTTP RESPONSE:
+<html><head><meta http-equiv="refresh" content="0;url=http://polabaer.de/index.php/polabaer.music/profil/show"/></head></html>
