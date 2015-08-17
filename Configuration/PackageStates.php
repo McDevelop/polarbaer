@@ -220,12 +220,12 @@ return array (
       'packagePath' => 'Libraries/mikey179/vfsStream/',
       'classesPath' => 'src/main/php/',
     ),
-    'TYPO3.Party' => 
+    'TYPO3.Fluid' => 
     array (
       'manifestPath' => '',
-      'composerName' => 'typo3/party',
+      'composerName' => 'typo3/fluid',
       'state' => 'active',
-      'packagePath' => 'Framework/TYPO3.Party/',
+      'packagePath' => 'Framework/TYPO3.Fluid/',
       'classesPath' => 'Classes/',
     ),
     'TYPO3.Eel' => 
@@ -252,12 +252,12 @@ return array (
       'packagePath' => 'Framework/TYPO3.Flow/',
       'classesPath' => 'Classes/',
     ),
-    'TYPO3.Fluid' => 
+    'TYPO3.Party' => 
     array (
       'manifestPath' => '',
-      'composerName' => 'typo3/fluid',
+      'composerName' => 'typo3/party',
       'state' => 'active',
-      'packagePath' => 'Framework/TYPO3.Fluid/',
+      'packagePath' => 'Framework/TYPO3.Party/',
       'classesPath' => 'Classes/',
     ),
     'TYPO3.Kickstart' => 
@@ -283,22 +283,6 @@ return array (
       'classesPath' => 'Classes/',
       'manifestPath' => '',
       'composerName' => 'polabaer/music',
-    ),
-    'Doctrine.MongoDB' => 
-    array (
-      'manifestPath' => '',
-      'composerName' => 'doctrine/mongodb',
-      'state' => 'active',
-      'packagePath' => 'Libraries/doctrine/mongodb/',
-      'classesPath' => 'lib/',
-    ),
-    'doctrine.mongodbodm' => 
-    array (
-      'manifestPath' => '',
-      'composerName' => 'doctrine/mongodb-odm',
-      'state' => 'active',
-      'packagePath' => 'Libraries/doctrine/mongodb-odm/',
-      'classesPath' => 'lib/',
     ),
   ),
   'version' => 4,
