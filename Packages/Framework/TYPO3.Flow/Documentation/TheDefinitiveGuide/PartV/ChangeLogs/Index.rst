@@ -1,7 +1,0 @@
-ChangeLogs
-==========
-
-.. toctree::
-	:glob:
-
-	*
