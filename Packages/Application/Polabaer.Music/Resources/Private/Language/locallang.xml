@@ -5,7 +5,8 @@
 		<description>Language labels for the polarbaer extension</description>
 	</meta>
 	<data type="array">
-		<languageKey index="default" type="array">			
+		<languageKey index="default" type="array">	
+                        <label index="profil.einstellungen">Following errors occurred</label>
 			<label index="error.errorsOccurred">Following errors occurred</label>
 			<label index="error.Blog.updateAction">Could not update blog</label>
 			<label index="error.Blog.createAction">Could not create blog</label>
