@@ -6,6 +6,7 @@
     
     <div class="profilContent floatLeft">
         <div class="einstellungen contentBackground">
+            <f:render partial="FormErrors" arguments="{for: 'profil'}" />
             <f:form action="update" controller="Profil" method="post" objectName="profil" object="{profil}">
                 <div class="shortInfo">
                     <div class="profilBild">
@@ -23,7 +24,7 @@
                                 <img src="http://polarbaer.de/Bilder/Objekte/haus.png" />
                             </label>
                             <f:form.textfield name="ort" property="ort" placeholder="Ort" value="{profil.Ort}"/>,
-                            <f:form.textfield name="age" property="age" placeholder="Age" value="{profil.Age}"/>
+                            <f:form.textfield name="age" property="age" placeholder="Age" errorClass="'error'" value="{profil.Age}"/>
                         </div>
                         <div><label>
                                 <img src="http://polarbaer.de/Bilder/Objekte/instrument.png" />

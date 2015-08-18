@@ -27,11 +27,11 @@ class Profil  extends \TYPO3\Party\Domain\Model\AbstractParty {
          * 
 	 */
 	protected $profilBild;
-       
         
         /**
          * Ort
          * @var string 
+         * @Flow\Validate(type="NotEmpty")
          */
         protected $ort;
         
@@ -44,6 +44,8 @@ class Profil  extends \TYPO3\Party\Domain\Model\AbstractParty {
         /**
          * Plz
          * @var int
+         * @Flow\Validate(type="NotEmpty")
+         * @Flow\Validate(type="Integer")
          */
         protected $age;
         
