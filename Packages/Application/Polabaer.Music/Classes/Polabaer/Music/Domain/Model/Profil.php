@@ -72,6 +72,13 @@ class Profil  extends \TYPO3\Party\Domain\Model\AbstractParty {
          * @var string
          */
         protected $instrumentText;
+        
+        /**
+         * Nachrichten
+         * @var \Doctrine\Common\Collections\Collection<\Polabaer\Music\Domain\Model\Nachricht>
+         * @ORM\ManyToMany(mappedBy="profil")
+         */
+        protected $nachrichten;
 
         /**
 	 * @return string
