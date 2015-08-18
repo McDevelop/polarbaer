@@ -131,7 +131,7 @@ header {
 /*Profil Bereich*/
 .profilContent {    
     
-    width: 415px;
+    width: 400px;
     margin-left:247px;
 }
 
@@ -142,15 +142,6 @@ header {
     -khtml-box-shadow:1px 1px 6px #292929; /* Konqueror */
     box-shadow:1px 1px 6px #292929; /* CSS3 */
 }
-
-img.profilBild {
-    width:  83px;
-    //height: 100px;   
-    position: absolute;
-    top: -25px;
-    left: -37px;
-}
-
 
 .profilContent .shortInfo {
     width: 486px;
@@ -196,18 +187,16 @@ img.profilBild {
 }
 
 .profilSuche {
-    width: 472px;
+    width: 345px;
     height: 130px;
     margin-top: 17px;    
 }
 
-
-
 .profilNav {
-    width: 116px;
+    width: 106px;
     padding: 6px;
     background-color: rgba(91, 201, 231, 0.4); 
-    margin-right: 181px;
+    margin-right: 210px;
     margin-bottom: 92px;
     position: relative;
 }
@@ -236,6 +225,13 @@ img.profilBildBackground {
     position: absolute;
     top: -41px;
     left: -57px;
+}
+img.profilBild {
+    width:  83px;
+    //height: 100px;   
+    position: absolute;
+    top: -25px;
+    left: -37px;
 }
 .socialMediaIcons {
     width: 237px;
